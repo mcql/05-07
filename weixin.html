@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,  user-scalable=no,maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/mindex.css">
+    <link rel="stylesheet" href="./fonticon_bi/iconfont.css">
+</head>
+<body>
+    <header class="header">
+        <span class="iconfont icon-fanhui"></span>
+        <span class="title">支付设置</span>
+        <span class="save">完成</span>
+    </header>
+    <section class="list">
+        <ul>
+            <li>
+                <p>姓名</p>
+                <input type="text" name="" id="" placeholder="用户247" readonly>
+            </li>
+            <li>
+                <p>微信账号</p>
+                <input type="text" name="" id="" placeholder="请输入账号" >
+            </li>
+        </ul>
+        <label for="upload_pic">
+            <input type="file" id='upload_pic'>
+            <div class="put_pic">
+                <div>
+                    <span class="iconfont icon-shangchuan"></span>
+                    <p>上传您的微信二维码</p>
+                </div>
+            </div>
+        </label>
+    </section>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $("#upload_pic").change(function(){
+            var file = document.getElementById('upload_pic').files[0]
+            var src = window.URL.createObjectURL(file)
+            var img = new Image()
+            img.src = src
+            $(".put_pic > div").remove()
+            $(".put_pic").append(img)
+
+        })
+    </script>
+</body>
+</html>

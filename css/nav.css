@@ -1,0 +1,95 @@
+.header{
+    height: .87rem;
+    line-height: .87rem;
+    background-color: #383f4f;
+    color: #fff;
+    font-size: .32rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .76rem;
+    box-sizing: border-box;
+}
+.part1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.part1 li{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: .28rem;
+    margin: .6rem 0 0 0;
+}
+.part1 li .iconfont{
+    font-size: .6rem;
+}
+
+.swiper-slide {
+    width: 70%;
+}
+
+.swiper-slide img{
+    width: 100%;
+    border-radius: .1rem;
+}
+.nav_swiper{
+    width: 90%;
+    margin-left: 10%;
+    margin-top: .6rem;
+    margin-bottom: .3rem;
+}
+.nav_nav{
+    background-color: #fff;
+    width: 100%;
+}
+.nav_nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_nav ul li{
+    width: 25%;
+    text-align: center;
+    font-size: .32rem;
+    color: #404040;
+    line-height: .77rem;
+    border-bottom: 1px solid #ededed;
+}
+.nav_nav ul li.active{
+    border-bottom: .05rem solid #659cf2;
+    color: #659cf2;
+}
+.line1{
+    height: .2rem;
+    background-color: #f5f5f5;
+}
+.nav_2 > p,.nav_3 > p,.nav_4 > p{
+    font-size: .32rem;
+    font-weight: 700;
+    margin-top: .5rem;
+    margin-left: .5rem;
+}
+
+.fixes_position{
+    position: fixed;
+    top: 0;
+}
+
+.part_last{
+    font-size: .28rem;
+    color: #94a0b8;
+    height: 3rem;
+    text-indent: .4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 3;
+    background: url(../images/last_bg.png) no-repeat right center;
+    background-size: contain;
+    margin-bottom: 5rem;
+}

@@ -1,0 +1,117 @@
+.header{
+    height: 1.05rem;
+    background-color: #2b3443;
+    padding: 0 .38rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header span{
+    color: #fff;
+    font-size: .36rem;
+    line-height: 1.05rem;
+    display: inline-block;
+}
+.header > span:first-child,.header .save{
+    font-size: .28rem;
+    width: .6rem;
+    text-align: right;
+}
+.header > span:first-child{
+    text-align: left;
+}
+.list{
+    padding: 0 .31rem;
+    box-sizing: border-box;
+    margin-top: .22rem;
+}
+.list li{
+    height: 1.2rem;
+    border-bottom: 1px solid #ededed;
+    font-size: .3rem;
+    display: flex;
+    justify-content: space-between;
+    color: #646464;
+    align-items: center;
+}
+.list input{
+    line-height: 1.2rem;
+    text-align: right;
+}
+.list input::-webkit-input-placeholder{
+    color: #646464;
+}
+.list li:last-child{
+    border-bottom: 0;
+}
+.list .iconfont{
+    margin-left: .15rem;
+}
+#upload_pic{
+    display: none;
+}
+.put_pic,.put_pic > div{
+    width: 100%;
+    height: 3.4rem;
+    box-sizing: border-box;
+    border: 1px solid #727783;
+    border-radius: .08rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: .3rem;
+}
+.put_pic img{
+    max-height: 100%;
+}
+.put_pic .iconfont{
+    font-size: .5rem;
+}
+.choose_shensu{
+    font-size: .3rem;
+}
+.choose_shensu input[type='radio']{
+    width: .3rem;
+    height: .3rem;
+    border-radius: .15rem;
+    background: url(../images/choose_fail.png) no-repeat center center;
+    background-size: cover;
+}
+.choose_shensu input:checked{
+    background: url(../images/choose_success.png) no-repeat center center;
+    background-size: cover;
+}
+.choose_shensu h5{
+    font-size: .36rem;
+    padding: .2rem;
+    box-sizing: border-box;
+}
+.choose_shensu li{
+    padding: .2rem .5rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.choose_shensu span{
+    display: inline-block;
+    margin-left: .3rem;
+}
+.other_reason{
+    border-bottom: 1px solid #2b3443;
+    line-height: .5rem;
+    padding-left: .1rem;
+    margin-left: .2rem;
+}
+.shensu_btn{
+    width: 6rem;
+    margin: .4rem auto;
+    line-height: .8rem;
+    text-align: center;
+    color: #fff;
+    background-color: #2b3443;
+    border-radius: .4rem;
+    box-shadow: .05rem .05rem .05rem #2b3443;
+}

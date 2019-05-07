@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,  user-scalable=no,maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/Swiper/4.5.0/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./font/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+        .paihangbang{
+            font-size: .28rem;
+            padding-bottom: .5rem;
+        }
+        .paihangbang li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: .8rem;
+            border-bottom: 1px solid #a7a7a7;
+        }
+        .paihangbang li > div:first-child{
+            width: 20%;
+            text-align: left;
+            text-indent: .2rem;
+        }
+        .paihangbang li > div:nth-child(2){
+            width: 30%;
+            text-align: left;
+        }
+        .paihangbang li > div:nth-child(3){
+            width: 30%;
+            text-align: right;
+            padding-right: .2rem;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <div class="header_search">
+            <span class="iconfont icon-saoyisao"></span>
+            <div class="header_search_input">
+                <span class="iconfont icon-sousuo"></span>
+                <input type="text" placeholder="beeradar">
+            </div>
+        </div>
+        <div class="suanli">
+            <div class="suanli_all">
+                当前挖宝算力<span class="suanli_first_num">531</span>
+                <span class="suanli_small">+算力</span>
+            </div>
+            <p class="suanli_num">7</p>
+        </div>
+        <div class="header_nav">
+            <div class="header_nav_first">
+                <p>
+                    <span class="iconfont icon-qianbao"></span>
+                    <span>钱包</span>
+                </p>
+                <p>
+                    <span class="iconfont icon-qiandai"></span>
+                    <span>钱包</span>
+                </p>
+                <p>
+                    <span class="iconfont icon-huaban-"></span>
+                    <span>钱包</span>
+                </p>
+            </div>
+            <p>
+                <span class="iconfont icon-yaoqing"></span>
+                <span>钱包</span>
+            </p>
+        </div>
+        <div class="star">
+            <div class="star1 a"><div class="star_time"><img src="./images/star1.png" alt=""><p>还剩<span>00:30</span></p></div><p class="star_name">GXC</p></div>
+            <div class="star2 a"><div class="star_time"><img src="./images/star2.png" alt=""><p>还剩<span>09:32</span></p></div><p class="star_name">GXC</p></div>
+            <div class="star3 a"><div class="star_time"><img src="./images/star3.png" alt=""><p>还剩<span>09:34</span></p></div><p class="star_name">GXC</p></div>
+            <div class="star4 a"><div class="star_time"><img src="./images/star4.png" alt=""><p>还剩<span>09:35</span></p></div><p class="star_name">GXC</p></div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="get_locaton paihangbang">
+            <h5>排行榜</h5>
+            <ul>
+                <li>
+                    <div>排名</div>
+                    <div>姓名</div>
+                    <div>算力值</div>
+                </li>
+                <li>
+                    <div>NO.1</div>
+                    <div>姓名1</div>
+                    <div>123.32</div>
+                </li>
+                <li>
+                    <div>NO.1</div>
+                    <div>姓名1</div>
+                    <div>123.32</div>
+                </li>
+                <li>
+                    <div>NO.1</div>
+                    <div>姓名1</div>
+                    <div>123.32</div>
+                </li>
+            </ul>
+        </div>
+        <div class="get_locaton">
+            <h5>开心夺宝</h>
+            <p>允许"布洛克城"获取你的位置</p>
+            <p>一起来全民开心夺宝</p>
+            <div class="get_location_btn">去设置</div>
+        </div>
+        <div class="adv">
+            <h5>货期通</h5>
+            <div class="adv_pic">
+                <p class="adv_num">+<span>3.80%</span></p>
+                <div class="adv_text">
+                    <p>BTC活期理财</p>
+                    <p>随存随取 风险极低 实时到账</p>
+                </div>
+            </div>
+        </div>
+        <div class="zhaomu">
+            <h5>VIP招募令</h5>
+            <p>投资满额即享VIP特权，还可领取公信宝周边礼品</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./images/banner1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./images/banner2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="./images/banner3.png" alt=""></div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="article">
+            <ul>
+                <li>
+                    <div class="article_title">
+                        <p>新闻标题新闻标题新闻标题新闻标题</p>
+                        <p><span class="iconfont icon-i-message"></span>45<span class="iconfont icon-zan"></span>100</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="artcle_pic">
+                        <div class="article_title">
+                            <p>新闻标题新闻标题新闻标题新闻标题</p>
+                            <p><span class="iconfont icon-i-message"></span>45<span class="iconfont icon-zan"></span>100</p>
+                        </div>
+                        <img src="./images/test.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="article_title">
+                        <p>新闻标题新闻标题新闻标题新闻标题</p>
+                        <p><span class="iconfont icon-i-message"></span>45<span class="iconfont icon-zan"></span>100</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="article_title">
+                        <p>新闻标题新闻标题新闻标题新闻标题</p>
+                        <p><span class="iconfont icon-i-message"></span>45<span class="iconfont icon-zan"></span>100</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="artcle_pic">
+                        <div class="article_title">
+                            <p>新闻标题新闻标题新闻标题新闻标题</p>
+                            <p><span class="iconfont icon-i-message"></span>45<span class="iconfont icon-zan"></span>100</p>
+                        </div>
+                        <img src="./images/test.png" alt="">
+                    </div>
+                </li>
+            </ul>
+            <p class="article_person"><span>12345</span>人正在社区讨论</p>
+            <div class="to_article">去社区</div>
+        </div>
+        <div class="other">
+            <ul>
+                <li>
+                    <p>布洛克城数据</p>
+                    <p>21331位居名</p>
+                </li>
+                <li>
+                    <p>做自己数据的主人</p>
+                    <p>布洛克城的解决方案</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script>
+         var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+        function random(lower, upper) {
+            return Math.floor(Math.random() * (upper - lower)) + lower;
+        }
+        $(function(){
+            var length = $(".star > div").length;
+            var x,y;
+            for(var i = 0;i < length;i++){
+                $(".star").children("div").eq(i).css({"left": random(0, 80)+'%', "top":random(0,180)+'px'});
+            }
+            setInterval(function(){
+                var sum=[]
+                for(var i = 0;i < length;i++){
+                    x = $(".star").children("div.a").eq(i).find("span").html();
+                    y = x.split(':')
+                    if(parseInt(y[0]*60) + parseInt(y[1]) > 0){
+                        sum.push(parseInt(y[0]*60) + parseInt(y[1]))
+                    }else{
+                        $(".star").children("div").eq(i).removeClass("a");
+                        $(".star").children("div").eq(i).find(".star_time").find("p").html('可收取');
+                        length--;
+                    }
+                }
+                for(var x = 0;x<sum.length;x++){
+                    var xy = parseInt((sum[x]-1)/60) + ":" + (sum[x]-1)%60
+                    $(".star").children("div.a").eq(x).find("span").html(xy);
+                }
+            },1000)
+
+            $(".star > div").on('click',function(){
+                if($(this).find(".star_time").find("p").html() === '可收取'){
+                    $(this).remove()
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

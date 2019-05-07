@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,  user-scalable=no,maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/mindex.css">
+    <link rel="stylesheet" href="./fonticon_bi/iconfont.css">
+</head>
+
+<body>
+    <header class="header">
+        <span class="iconfont icon-fanhui"></span>
+        <span class="title">我要申诉</span>
+        <span class="save"></span>
+    </header>
+    <section class="choose_shensu">
+        <h5>申诉类型</h5>
+        <ul>
+            <li>
+                <label for="a">
+                    <input type="radio" name="shensu" id="a" checked="checked">
+                    <span>买家并未付款</span>
+                </label>
+            </li>
+            <li>
+                <label for="b">
+                    <input type="radio" name="shensu" id="b">
+                    <span>卖家不释放数字币</span>
+                </label>
+            </li>
+            <li>
+                <label for="c">
+                    <input type="radio" name="shensu" id="c">
+                    <span>长时间无响应</span>
+                </label>
+            </li>
+            <li>
+                <label for="d">
+                    <input type="radio" name="shensu" id="d">
+                    <span>涉嫌诈骗</span>
+                </label>
+            </li>
+            <li>
+                <label for="e">
+                    <input type="radio" name="shensu" id="e">
+                    <span>涉嫌洗钱</span>
+                </label>
+            </li>
+            <li>
+                <label for="f">
+                    <input type="radio" name="shensu" value="other" id="f">
+                    <span>其他</span>
+                </label>
+                <input type="text" class="other_reason hide" placeholder="请输入申述内容">
+            </li>
+        </ul>
+        <div class="shensu_btn">
+            提交申诉
+        </div>
+    </section>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('input[type=radio][name=shensu]').change(function() {
+            console.log($(this).val())
+            if ($(this).val() == 'other') {
+                $(".other_reason").removeClass('hide')
+            }else{
+                $(".other_reason").addClass('hide')
+            }
+        })
+    </script>
+</body>
+
+</html>
