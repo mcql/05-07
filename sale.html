@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1,  user-scalable=no,maximum-scale=1, minimum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./layui/css/layui.mobile.css">
+  <link rel="stylesheet" href="./font/font.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/mindex.css">
+  <link rel="stylesheet" href="./fonticon_bi/iconfont.css">
+  <link rel="stylesheet" href="./other/iconfont.css">
+</head>
+
+<body>
+  <header class="header">
+    <span class="iconfont icon-fanhui"></span>
+    <span class="title">出售</span>
+    <span class="save"></span>
+  </header>
+  <section>
+    <div class="sale_info">
+      <div class="sale_info_pic"><img src="./images/test_info.jpg" alt=""></div>
+      <div class="sale_info_name">
+        <p>
+          <span class="sale_info_name_txt">Franker</span>
+          <span class="iconfont icon-yinxingqia"></span>
+          <span class="iconfont icon-weixin"></span>
+          <span class="iconfont icon-zhifubao"></span>
+        </p>
+        <p>限额:50-300 EOS</p>
+      </div>
+      <p class="sale_info_money">32.03CNY</p>
+    </div>
+    <div class="sale_pingjia">
+      <ul>
+        <li>
+          <p>231165</p>
+          <p>交易次数</p>
+        </li>
+        <li>
+          <p>4565</p>
+          <p>信任人数</p>
+        </li>
+        <li>
+          <p>100%</p>
+          <p>好评</p>
+        </li>
+      </ul>
+    </div>
+    <div class="sale_message">
+      提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息
+    </div>
+    <div class="sale_num">
+      <div class="sale_num_content">
+        <p>你想出售多少</p>
+        <p class="sale_num_max">交易限额：0.01-100 BTC</p>
+        <div class="sale_num_input">
+          <span class="sale_money_type">BTC</span>
+          <input type="text" value="" placeholder="出售数量">
+          <span class="iconfont icon-zhuanhuan"></span>
+          <span class="sale_money_type">CNY</span>
+          <input type="text" value="" placeholder="出售金额">
+        </div>
+        <p class="sale_money_has">您的余额：<span>0</span> BTC <span>全部</span></p>
+      </div>
+    </div>
+    <div class="sale_message sale_message_info">
+      提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息提示信息
+    </div>
+    <div class="shensu_btn">
+        出售
+    </div>
+  </section>
+
+  <script src="./layui/layui.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(".shensu_btn").on('click', function() {
+      layui.use('layer', function(){
+        var layer = layui.layer
+        var str = ''
+        str += '<div>'
+        str += '<h5>下单确认</h5>'
+        str += '<p><span>出售价格</span><span>465456.44CNY</span></p>'
+        str += '<p><span>出售金额</span><span>465456.44CNY</span></p>'
+        str += '<p><span>出售数量</span><span>1 BTC</span></p>'
+        str += '<p class="dialog_sale_message">操作提示操作提示操作提示操作提示操作提示操作提示</p>'
+        str += '</div>'
+        layer.open({
+          title: false,
+          closeBtn: false,
+          btn: ['确认出售', '取消出售'],
+          type: 1,
+          content: str,
+          skin: 'sale',
+          yes:function(){
+            layer.msg('提示', {tips:3, time:1000}, function() {
+              alert('回调')
+            })
+          }
+        })
+      }); 
+    })
+  </script>
+</body>
+
+</html>
