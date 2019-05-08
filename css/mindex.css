@@ -391,3 +391,192 @@
 .header>div:nth-child(1) span:last-child {
   margin-left: .1rem;
 }
+
+.bi_type ul {
+  font-size: .3rem;
+  display: flex;
+  justify-content: flex-start;
+  line-height: .9rem;
+  border-bottom: 1px solid #ebebeb;
+  padding: 0 .2rem;
+  box-sizing: border-box;
+}
+
+.bi_type ul li {
+  width: 15%;
+  text-align: center;
+}
+
+.bi_type ul li.active {
+  color: #ff753c;
+  border-bottom: 2px solid #ff753c;
+}
+
+.home_list {
+  padding: 0 .35rem;
+  box-sizing: border-box;
+}
+
+.home_list_all {
+  height: calc(100% - .9rem);
+  overflow-y: scroll;
+}
+
+.home_list li {
+  padding: .3rem 0;
+  box-sizing: border-box;
+  font-size: .3rem;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.home_list li .home_list_pic,
+.record_list .record_list_pic {
+  width: .55rem;
+  height: .55rem;
+  border-radius: .28rem;
+  overflow: hidden;
+}
+
+.record_list .record_list_pic {
+  width: .8rem;
+  height: .8rem;
+  border-radius: .4rem;
+}
+
+.home_list li .home_list_pic img,
+.record_list .record_list_pic img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.home_list li>div {
+  margin-top: .2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.home_man_sale {
+  font-size: .26rem;
+}
+
+.home_sale_money {
+  font-size: .36rem;
+  font-weight: 700;
+}
+
+.home_sale_money_type {
+  width: 2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home_sale_btn {
+  width: 2rem;
+  line-height: .7rem;
+  color: #fff;
+  background-color: #ff753c;
+  text-align: center;
+  border-radius: .05rem;
+}
+
+.home_bi {
+  height: calc(100% - 1.05rem);
+}
+
+.layui-layer.layui-layer-page.choose_bi {
+  width: 6rem;
+  font-size: .3rem;
+}
+
+.layui-layer.layui-layer-page.choose_bi .home_dialog_choose {
+  padding: .3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.layui-layer.layui-layer-page.choose_bi .home_dialog_choose ul {
+  height: 3rem;
+  overflow-y: scroll;
+}
+
+.layui-layer.layui-layer-page.choose_bi .home_dialog_choose ul>li {
+  line-height: 2;
+}
+
+.home_dialog_choose_title {
+  font-size: .36rem;
+  font-weight: 600;
+}
+
+.header>div.record {
+  width: 60%;
+}
+
+.bi_type.record ul li {
+  width: 33%;
+}
+
+.bi_type.record ul {
+  justify-content: space-between;
+}
+
+.record_list {
+  font-size: .28rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: .3rem 0;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.record_list_content {
+  width: 4.3rem;
+  margin-left: .3rem;
+  line-height: 1.8;
+}
+
+.record_lists {
+  padding: .3rem;
+  box-sizing: border-box;
+}
+
+.record_list_name {
+  font-size: .32rem;
+  font-weight: 700;
+}
+
+.record_list_name span {
+  font-size: .26rem;
+  background-color: #ff753c;
+  font-weight: normal;
+  color: #fff;
+  padding: 0 .1rem;
+  margin-left: .2rem;
+  vertical-align: bottom;
+  border-radius: .05rem;
+}
+
+.record_list_status p {
+  font-size: .30rem;
+  line-height: 2;
+}
+
+.record_list_status p:first-child {
+  font-weight: 700;
+}
+
+.record_list_status p:first-child.over {
+  color: #ff753c;
+}
+
+.record_list_status p:first-child.doing {
+  color: #ff0000;
+}
+
+.record_list_status p:first-child.cancel {
+  color: #afaeae;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,  user-scalable=no,maximum-scale=1, minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./layui/css/layui.mobile.css">
+    <link rel="stylesheet" href="./font/font.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/mindex.css">
+    <link rel="stylesheet" href="./fonticon_bi/iconfont.css">
+    <link rel="stylesheet" href="./other/iconfont.css">
+</head>
+
+<body>
+    <header class="header">
+        <div></div>
+        <div class="home_change_type record"><span class="active">全部</span><span>买单</span><span>卖单</span></div>
+        <div></div>
+    </header>
+    <section>
+        <div class="bi_type record">
+            <ul>
+                <li class="active">进行中</li>
+                <li>已完成</li>
+                <li>已取消</li>
+            </ul>
+        </div>
+        <div class="record_lists">
+            <ul>
+                <li class="record_list">
+                    <div class="record_list_pic"><img src="./images/test_info.jpg" alt=""></div>
+                    <div class="record_list_content">
+                        <p class="record_list_name">JackSon<span>购买USDT</span></p>
+                        <p>编号：456456-45das-456</p>
+                        <p>时间：2019-01-14 10:10:10</p>
+                        <p>单价：6.92 CNY</p>
+                        <p>数量：72.6125145 USDT</p>
+                    </div>
+                    <div class="record_list_status">
+                        <p class="over">交易完成</p>
+                        <p>500CNY</p>
+                    </div>
+                </li>
+                <li class="record_list">
+                    <div class="record_list_pic"><img src="./images/test_info.jpg" alt=""></div>
+                    <div class="record_list_content">
+                        <p class="record_list_name">JackSon<span>购买USDT</span></p>
+                        <p>编号：456456-45das-456</p>
+                        <p>时间：2019-01-14 10:10:10</p>
+                        <p>单价：6.92 CNY</p>
+                        <p>数量：72.6125145 USDT</p>
+                    </div>
+                    <div class="record_list_status">
+                        <p class="doing">交易进行中</p>
+                        <p>500CNY</p>
+                    </div>
+                </li>
+                <li class="record_list">
+                    <div class="record_list_pic"><img src="./images/test_info.jpg" alt=""></div>
+                    <div class="record_list_content">
+                        <p class="record_list_name">JackSon<span>购买USDT</span></p>
+                        <p>编号：456456-45das-456</p>
+                        <p>时间：2019-01-14 10:10:10</p>
+                        <p>单价：6.92 CNY</p>
+                        <p>数量：72.6125145 USDT</p>
+                    </div>
+                    <div class="record_list_status">
+                        <p class="cancel">交易进行中</p>
+                        <p>500CNY</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(".home_change_type span").on('click', function () {
+            $(".home_change_type span").removeClass('active')
+            $(this).addClass('active')
+        })
+        $(".bi_type li").on('click', function () {
+            $(".bi_type li").removeClass('active')
+            $(this).addClass('active')
+        })
+    </script>
+</body>
+
+</html>

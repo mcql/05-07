@@ -6,6 +6,7 @@
   <meta name="viewport" content="initial-scale=1,  user-scalable=no,maximum-scale=1, minimum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="./layui/css/layui.mobile.css">
   <link rel="stylesheet" href="./font/font.css">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/mindex.css">
@@ -15,10 +16,262 @@
 
 <body>
   <header class="header">
-    <div><span>CNY</span><span>/</span><span>BTC</span><span class="iconfont icon-ico_open"></span></div>
-    <div><span class="active">买币</span><span>卖币</span></div>
+    <div class="home_change_bi"><span>CNY</span><span>/</span><span>BTC</span><span class="iconfont icon-ico_open"></span></div>
+    <div class="home_change_type"><span class="active">买币</span><span>卖币</span></div>
     <div><span class="iconfont icon-sousuo"></span><span class="iconfont icon-tianjia"></span></div>
   </header>
+  <section class="home_bi">
+    <div class="bi_type">
+      <ul>
+        <li class="active">BTC</li>
+        <li>ETH</li>
+        <li>USDT</li>
+        <li>EOS</li>
+      </ul>
+    </div>
+    <div class="home_list_all">
+      <ul class="home_list">
+        <li>
+          <div>
+            <div class="home_list_pic">
+              <img src="./images/test_info.jpg" alt="">
+            </div>
+            <p class="sale_info_name_txt">Franker</p>
+            <p class="home_man_sale">
+              <span>交易 12398</span>
+              <span>好评 100%</span>
+              <span>信任 722</span>
+            </p>
+          </div>
+          <div>
+            <p class="home_sale_money">40666 CNY</p>
+            <p class="home_sale_money_type">
+              <span class="iconfont icon-yinxingqia"></span>
+              <span class="iconfont icon-weixin"></span>
+              <span class="iconfont icon-zhifubao"></span>
+            </p>
+          </div>
+          <div>
+            <p>限额:50-300 EOS</p>
+            <div onclick="validate(id)" class="home_sale_btn">购买</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="home_list_pic">
+              <img src="./images/test_info.jpg" alt="">
+            </div>
+            <p class="sale_info_name_txt">Franker</p>
+            <p class="home_man_sale">
+              <span>交易 12398</span>
+              <span>好评 100%</span>
+              <span>信任 722</span>
+            </p>
+          </div>
+          <div>
+            <p class="home_sale_money">40666 CNY</p>
+            <p class="home_sale_money_type">
+              <span class="iconfont icon-yinxingqia"></span>
+              <span class="iconfont icon-weixin"></span>
+              <span class="iconfont icon-zhifubao"></span>
+            </p>
+          </div>
+          <div>
+            <p>限额:50-300 EOS</p>
+            <div onclick="validate(id)" class="home_sale_btn">购买</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="home_list_pic">
+              <img src="./images/test_info.jpg" alt="">
+            </div>
+            <p class="sale_info_name_txt">Franker</p>
+            <p class="home_man_sale">
+              <span>交易 12398</span>
+              <span>好评 100%</span>
+              <span>信任 722</span>
+            </p>
+          </div>
+          <div>
+            <p class="home_sale_money">40666 CNY</p>
+            <p class="home_sale_money_type">
+              <span class="iconfont icon-yinxingqia"></span>
+              <span class="iconfont icon-weixin"></span>
+              <span class="iconfont icon-zhifubao"></span>
+            </p>
+          </div>
+          <div>
+            <p>限额:50-300 EOS</p>
+            <div onclick="validate(id)" class="home_sale_btn">购买</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="home_list_pic">
+              <img src="./images/test_info.jpg" alt="">
+            </div>
+            <p class="sale_info_name_txt">Franker</p>
+            <p class="home_man_sale">
+              <span>交易 12398</span>
+              <span>好评 100%</span>
+              <span>信任 722</span>
+            </p>
+          </div>
+          <div>
+            <p class="home_sale_money">40666 CNY</p>
+            <p class="home_sale_money_type">
+              <span class="iconfont icon-yinxingqia"></span>
+              <span class="iconfont icon-weixin"></span>
+              <span class="iconfont icon-zhifubao"></span>
+            </p>
+          </div>
+          <div>
+            <p>限额:50-300 EOS</p>
+            <div onclick="validate(id)" class="home_sale_btn">购买</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="home_list_pic">
+              <img src="./images/test_info.jpg" alt="">
+            </div>
+            <p class="sale_info_name_txt">Franker</p>
+            <p class="home_man_sale">
+              <span>交易 12398</span>
+              <span>好评 100%</span>
+              <span>信任 722</span>
+            </p>
+          </div>
+          <div>
+            <p class="home_sale_money">40666 CNY</p>
+            <p class="home_sale_money_type">
+              <span class="iconfont icon-yinxingqia"></span>
+              <span class="iconfont icon-weixin"></span>
+              <span class="iconfont icon-zhifubao"></span>
+            </p>
+          </div>
+          <div>
+            <p>限额:50-300 EOS</p>
+            <div onclick="validate(id)" class="home_sale_btn">购买</div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <div class="home_list_pic">
+              <img src="./images/test_info.jpg" alt="">
+            </div>
+            <p class="sale_info_name_txt">Franker</p>
+            <p class="home_man_sale">
+              <span>交易 12398</span>
+              <span>好评 100%</span>
+              <span>信任 722</span>
+            </p>
+          </div>
+          <div>
+            <p class="home_sale_money">40666 CNY</p>
+            <p class="home_sale_money_type">
+              <span class="iconfont icon-yinxingqia"></span>
+              <span class="iconfont icon-weixin"></span>
+              <span class="iconfont icon-zhifubao"></span>
+            </p>
+          </div>
+          <div>
+            <p>限额:50-300 EOS</p>
+            <div onclick="validate(id)" class="home_sale_btn">购买</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <script src="./layui/layui.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(".home_change_type span").on('click', function () {
+      $(".home_change_type span").removeClass('active')
+      $(this).addClass('active')
+    })
+    $(".bi_type li").on('click', function () {
+      $(".bi_type li").removeClass('active')
+      $(this).addClass('active')
+    })
+    $(".home_change_bi").on('click', function() {
+      layui.use('layer', function () {
+        var layer = layui.layer
+        var str = ''
+        str += '<div class="home_dialog_choose">'
+        str += '<div>'
+        str += '<p class="home_dialog_choose_title">法定货币</p>'
+        str += '<ul class="home_dialog_choose_left">'
+        str += '<li>CNY</li>'
+        str += '<li>KRW</li>'
+        str += '<li>JPY</li>'
+        str += '<li>USD</li>'
+        str += '<li>HKD</li>'
+        str += '</ul>'
+        str += '</div>'
+        str += '<div>'
+        str += '<p class="home_dialog_choose_title">数字货币</p>'
+        str += '<ul class="home_dialog_choose_right">'
+        str += '<li>BTC</li>'
+        str += '<li>ETH</li>'
+        str += '<li>EOS</li>'
+        str += '<li>USDT</li>'
+        str += '<li>OTB</li>'
+        str += '<li>QTUM</li>'
+        str += '<li>LTC</li>'
+        str += '</ul>'
+        str += '</div>'
+        str += '</div>'
+        layer.open({
+          title: false,
+          closeBtn: false,
+          type: 1,
+          content: str,
+          skin: 'choose_bi',
+        })
+        $(".home_dialog_choose_left li").on('click', function() {
+          var left = $(this).text()
+          $(".home_change_bi span:first-child").text(left)
+          layer.closeAll()
+        })
+        $(".home_dialog_choose_right li").on('click', function() {
+          var right = $(this).text()
+          $(".home_change_bi span:nth-child(3)").text(right)
+          layer.closeAll()
+        })
+      })
+
+    })
+    function validate(id) {
+      if (false) {
+        window.onload = 'url' + id
+      } else {
+        // layer.msg('提示', {tips:3, time:1000}, function() {
+        //   alert('回调')
+        // })
+        layui.use('layer', function () {
+          var layer = layui.layer
+          var str = ''
+          str += '<div>'
+          str += '<h5>认证提示</h5>'
+          str += '<p>广告主需要您先通过实名认证</p>'
+          str += '</div>'
+          layer.open({
+            title: false,
+            closeBtn: false,
+            btn: ['前往验证', '取消'],
+            type: 1,
+            content: str,
+            skin: 'sale',
+            yes: function () {
+              alert('页面跳转')
+            }
+          })
+        })
+      }
+    }
+  </script>
 </body>
 
 </html>
