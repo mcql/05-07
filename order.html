@@ -10,15 +10,71 @@
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/mindex.css">
   <link rel="stylesheet" href="./fonticon_bi/iconfont.css">
-  <link rel="stylesheet" href="./other/iconfont.css">
 </head>
 
 <body>
   <header class="header">
-    <span class="iconfont icon-fanhui"></span>
+    <span class="iconfont iconfanhui"></span>
     <span class="title">购买订单</span>
     <span class="save"></span>
   </header>
+  <section class="order">
+    <!-- 三个状态样式 doing success cancel -->
+    <p class="order_status"><span>订单编号:e321ad-123qa</span><span class="success">付款成功</span></p>
+    <div class="order_content">
+      <p><span>交易金额</span><span>85256.123 CNY</span></p>
+      <p><span>交易数量</span><span>8 ETH</span></p>
+      <p><span>交易价格</span><span>85256.123CNY</span></p>
+    </div>
+    <div class="order_info">
+      <p><span>对方信息</span><span class="order_man_name">OTC Ventas</span></p>
+      <span class="iconfont icontishi"></span>
+    </div>
+    <div class="order_message">
+      <p>交易说明</p>
+      <p>交易说明交易说明交易说明交易说明交易说明交易说明交易说明交易说明交易说明交易说明交易说明</p>
+    </div>
+    <div class="order_pay">
+      <p>支付信息</p>
+      <p class="order_pay_type"><span class="iconfont iconyinxingqia"></span><span class="iconfont iconweixin"></span><span class="iconfont iconzhifubao"></span></p>
+    </div>
+    <div class="order_message_pay">
+      <p>ETH托管时间剩余<span class="order_time">00:10:03</span>逾期将自动取消</p>
+      <p>请及时付款并点击标记付款</p>
+    </div>
+    <div class="order_btn">
+      <span>取消交易</span>
+      <span>延长有效期</span>
+      <span class="important">标记付款</span>
+    </div>
+  </section>
+  <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+  <script>
+    $(function() {
+      var timeInterval = setInterval(function() {
+        var time = $(".order_time").text()
+        var timex = time.split(':')
+        var time_real = Number(timex[0]) * 3600 + Number(timex[1]) * 60 + Number(timex[2])
+        time_real -= 1
+        var hours = parseInt(time_real / 3600)
+        var min = parseInt((time_real - hours * 3600) / 60)
+        var sec = (time_real - hours * 3600 - min * 60)
+        if (hours < 10) {
+          hours = '0' + hours
+        }
+        if (min < 10) {
+          min = '0' + min
+        }
+        if (sec < 10) {
+          sec = '0' + sec
+        }
+        $(".order_time").text(hours + ':' + min + ':' + sec)
+        if (time_real == 0) {
+          clearInterval(timeInterval)
+        }
+      }, 1000)
+    })
+  </script>
 </body>
 
 </html>

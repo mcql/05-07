@@ -149,15 +149,15 @@
   box-sizing: border-box;
 }
 
-.iconfont.icon-yinxingqia {
-  color: #849200;
+.iconfont.iconyinxingqia {
+  color: #cde401;
 }
 
-.iconfont.icon-weixin {
+.iconfont.iconweixin {
   color: #00b408;
 }
 
-.iconfont.icon-zhifubao {
+.iconfont.iconzhifubao {
   color: #00a3ee;
 }
 
@@ -579,4 +579,238 @@
 
 .record_list_status p:first-child.cancel {
   color: #afaeae;
+}
+
+.order{
+  font-size: .3rem;
+  padding: .34rem;
+  box-sizing: border-box;
+}
+
+.order_status,.order_content > p,.order_info,.order_pay,.order_pay_type{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.03rem;
+}
+
+.order_status,.order_content,.order_info,.order_message,.order_pay,.order_message_pay{
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.order_status span.success{
+  color: #ff0000;
+  font-size: .36rem;
+}
+
+.order_status span.doing{
+  color: #00b408;
+  font-size: .36rem;
+}
+
+.order_status span.cancel{
+  color: #727783;
+}
+
+.order_content,.order_message{
+  padding: .3rem 0;
+}
+
+.order_info .iconfont{
+  color: #ff753c;
+}
+
+.order_man_name{
+  font-weight: 700;
+  margin-left: .2rem;
+}
+
+.order_content > p > span:first-child,.order_message > p:first-child {
+  color: #646464;
+}
+
+.order_pay_type{
+  width: 3rem;
+}
+
+.order_message_pay{
+  text-align: center;
+  padding: .3rem 0;
+}
+
+.order_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: .4rem;
+}
+
+.order_btn span{
+  display: inline-block;
+  width: 30%;
+  line-height: .7rem;
+  text-align: center;
+  color: #fff;
+  border-radius: .35rem;
+  background-color: rgb(109, 109, 109);
+}
+
+.order_btn span.important{
+  background-color: #ff753c;
+}
+
+.order_time{
+  color: #ff753c;
+  font-weight: 700;
+  padding: 0 .2rem;
+}
+
+.tosale{
+  font-size: .3rem;
+}
+
+.tosale > ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: .2rem 0;
+}
+
+.tosale > ul > li{
+  width: 35%;
+  line-height: .7rem;
+  text-align: center;
+  border: 1px solid #646464;
+  border-radius: .1rem;
+}
+
+.tosale > ul > li.tobuy{
+  border-color: rgb(44, 119, 0);
+  background-color: #fff;
+  color: rgb(44, 119, 0);
+}
+
+.tosale > ul > li.tosell{
+  border-color: rgb(173, 26, 0);
+  background-color: #fff;
+  color: rgb(173, 26, 0);
+}
+
+.tosale > ul > li.tobuy_active{
+  background-color: rgb(44, 119, 0);
+  color: #fff;
+  border-color: rgb(44, 119, 0);
+}
+
+.tosale > ul > li.tosell_active{
+  background-color: rgb(173, 26, 0);
+  color: #fff;
+  border-color: rgb(173, 26, 0);
+}
+
+.input_sale{
+  line-height: .7rem;
+  width: 100%;
+  border: 1px solid #aaaaaa;
+}
+
+.input_sale span{
+  font-size: .26rem;
+}
+
+.input_sale input{
+  width: 2.3rem;
+  padding-left: .1rem;
+}
+.tosale_content{
+  padding: .34rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.tosale_content > div {
+  width: 48%;
+}
+
+.to_sale_title {
+  color: #646464;
+}
+
+.to_sale_my_money{
+  font-weight: 700;
+  line-height: .7rem;
+}
+
+.to_sale_money{
+  font-size: .28rem;
+  color: #333;
+  line-height: .7rem;
+}
+
+.to_sale_baifenbi{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .2rem auto;
+}
+
+.to_sale_baifenbi span{
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-radius: .05rem;
+  font-size: .24rem;
+  padding: 0 .1rem;
+}
+
+.buy_btn,.sell_btn{
+  width: 100%;
+  line-height: .7rem;
+  text-align: center;
+  background-color: rgb(44, 119, 0);
+  color: #fff;
+  border-radius: .08rem;
+  box-shadow: .05rem .05rem .05rem rgb(44, 119, 0);
+}
+.sell_btn{
+  box-shadow: .05rem .05rem .05rem rgb(173, 26, 0);
+  background-color: rgb(173, 26, 0);
+}
+.to_sale_detail.one li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  font-size: .34rem;
+  font-weight: 700;
+}
+
+.to_sale_detail.two li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #646464;
+  font-size: .24rem;
+  line-height: 1.8;
+  color: rgb(173, 26, 0);
+}
+
+.to_sale_detail.three li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #646464;
+  font-size: .22rem;
+  color: rgb(44, 119, 0);
+  line-height: 1.8;
+}
+
+.tosale_detail_t1,.tosale_detail_t2{
+  font-size: .36rem;
+  font-weight: 700;
+  color: #a88f02;
+}
+
+.tosale_detail_t2{
+  color: #646464;
 }
