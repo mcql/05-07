@@ -1,0 +1,7 @@
+(function(){var isTouchDevice=navigator.userAgent.match(/(iPhone|iPod|iPad|Android|playbook|silk|BlackBerry|BB10|Windows Phone|Tizen|Bada|webOS|IEMobile|Opera Mini)/);if(isTouchDevice){return;}
+var isMouseDown=false,originator,fireTouch,mousedown,mousemove,mouseup;fireTouch=function(type,e){var target,newEvent,touchesObj;target=originator||e.target;newEvent=document.createEvent('MouseEvent');newEvent.initMouseEvent(type,true,true,window,e.detail,e.screenX,e.screenY,e.clientX,e.clientY,e.ctrlKey,e.shiftKey,e.altKey,e.metaKey,e.button,e.relatedTarget);touchesObj=[{identifier:(new Date()).getTime(),pageX:e.pageX,pageY:e.pageY,clientX:e.clientX,clientY:e.clientY,target:target,screenX:e.screenX,screenY:e.screenY}];switch(type){case 'touchstart':originator=target;newEvent.touches=newEvent.changedTouches=newEvent.targetTouches=touchesObj;break;case 'touchmove':newEvent.touches=newEvent.changedTouches=newEvent.targetTouches=touchesObj;break;case 'touchend':originator=null;newEvent.changedTouches=touchesObj;newEvent.touches=newEvent.targetTouches=[];break;default:break;}
+e.target.dispatchEvent(newEvent);}
+mousedown=function(e){isMouseDown=true;fireTouch('touchstart',e);}
+mousemove=function(e){if(!isMouseDown)return;fireTouch('touchmove',e);}
+mouseup=function(e){isMouseDown=false;fireTouch('touchend',e);}
+document.addEventListener('mousedown',mousedown,false);document.addEventListener('mousemove',mousemove,false);document.addEventListener('mouseup',mouseup,false);window.ontouchstart=mousedown;window.ontouchmove=mousemove;window.ontouchend=mouseup;})();

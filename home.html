@@ -6,7 +6,7 @@
   <meta name="viewport" content="initial-scale=1,  user-scalable=no,maximum-scale=1, minimum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="./layui/css/layui.mobile.css">
+  <link rel="stylesheet" href="./layui/css/layui.css">
   <link rel="stylesheet" href="./font/font.css">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/mindex.css">
@@ -15,16 +15,50 @@
 
 <body>
   <header class="header">
-    <div class="home_change_bi"><span>CNY</span><span>/</span><span>BTC</span><span class="iconfont iconico_open"></span></div>
+    <div class="home_change_bi"><span>CNY</span><span>/</span><span>BTC</span><span
+        class="iconfont iconico_open"></span></div>
     <div class="home_change_type"><span class="active">买币</span><span>卖币</span></div>
     <div><span class="iconfont iconsousuo"></span><span class="iconfont icontianjia"></span></div>
+    <div class="add_nav hide">
+      <ul>
+        <li><a href=''>发布广告</a></li>
+        <li><a href=''>管理广告</a></li>
+      </ul>
+    </div>
   </header>
+  <section class="news">
+    <span class="iconfont icontongzhi1"></span>
+    <div class="layui-carousel" id="test1">
+      <div carousel-item>
+        <div>
+          <a>test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1test1</a>
+        </div>
+        <div>test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2test2
+        </div>
+        <div>test3test3test3test3test3test3test3test3test3test3test3test3test3test3test3test3test3test3test3test3test3
+        </div>
+        <div>test4test4test4test4test4test4test4test4test4test4test4test4test4test4test4test4test4test4test4test4test4
+        </div>
+        <div>test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5test5
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="home_bi">
     <div class="bi_type">
       <ul>
         <li class="active">BTC</li>
         <li>ETH</li>
         <li>USDT</li>
+        <li>EOS</li>
+        <li>EOS</li>
+        <li>EOS</li>
+        <li>EOS</li>
+        <li>EOS</li>
+        <li>EOS</li>
+        <li>EOS</li>
+        <li>EOS</li>
+        <li>EOS</li>
         <li>EOS</li>
       </ul>
     </div>
@@ -130,71 +164,180 @@
             <div onclick="validate(id)" class="home_sale_btn">购买</div>
           </div>
         </li>
-        <li>
-          <div>
-            <div class="home_list_pic">
-              <img src="./images/test_info.jpg" alt="">
-            </div>
-            <p class="sale_info_name_txt">Franker</p>
-            <p class="home_man_sale">
-              <span>交易 12398</span>
-              <span>好评 100%</span>
-              <span>信任 722</span>
-            </p>
-          </div>
-          <div>
-            <p class="home_sale_money">40666 CNY</p>
-            <p class="home_sale_money_type">
-              <span class="iconfont iconyinxingqia"></span>
-              <span class="iconfont iconweixin"></span>
-              <span class="iconfont iconzhifubao"></span>
-            </p>
-          </div>
-          <div>
-            <p>限额:50-300 EOS</p>
-            <div onclick="validate(id)" class="home_sale_btn">购买</div>
-          </div>
-        </li>
-        <li>
-          <div>
-            <div class="home_list_pic">
-              <img src="./images/test_info.jpg" alt="">
-            </div>
-            <p class="sale_info_name_txt">Franker</p>
-            <p class="home_man_sale">
-              <span>交易 12398</span>
-              <span>好评 100%</span>
-              <span>信任 722</span>
-            </p>
-          </div>
-          <div>
-            <p class="home_sale_money">40666 CNY</p>
-            <p class="home_sale_money_type">
-              <span class="iconfont iconyinxingqia"></span>
-              <span class="iconfont iconweixin"></span>
-              <span class="iconfont iconzhifubao"></span>
-            </p>
-          </div>
-          <div>
-            <p>限额:50-300 EOS</p>
-            <div onclick="validate(id)" class="home_sale_btn">购买</div>
-          </div>
-        </li>
       </ul>
     </div>
   </section>
   <script src="./layui/layui.js"></script>
   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./js/touche.js"></script>
+  <script src="./js/p-pull-refresh.js"></script>
   <script>
+    // 上拉到底部刷新
+    $(".home_list_all").scroll(function (e) {
+      var scrollTop = $(this).scrollTop(); //匹配元素的滚动条的垂直位置
+      var scrollHeight = $(".home_list_all").height(); //匹配元素document的高度
+      var windowHeight = $(".home_list").height(); //匹配元素的高度
+      // 滚动条到底部
+      if (parseInt(scrollTop + scrollHeight + 1) >= windowHeight) {
+        if ($(".home_list > p").length == 0) {
+          $.ajax({
+            url: '',
+            data: '',
+            dataType: '',
+            beforeSend: function () {
+                $(".home_list").append(
+                  '<p class="loading"><i class="layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"></i>Loading</p>'
+                )
+            },
+            success: function () {
+              $(".home_list").children('p').remove()
+            },
+            error: function () {
+
+            }
+          })
+        }
+      }
+    });
+
+    var starty,overy
+    window.addEventListener('touchstart', function (event) { //touchstart事件,当鼠标点击屏幕时触发
+      starty = event.touches[0].clientY; //获取当前点击位置y坐标
+    }, false);
+    window.addEventListener('touchmove', function (event) { //touchmove事件,当鼠标在屏幕移动时触发
+      overy = event.touches[0].clientY; //获取当前点击位置y坐标
+      if(overy - starty > 20){
+        if ($(".home_list > p").length == 0) {
+          $(".home_list").prepend(
+            '<p class="loading"><i class="layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"></i>Refresh</p>'
+          )
+          // 发送请求同滚动条到底部
+        }
+      }
+    }, false);
+
+
+    // 文字轮播
+    layui.use('carousel', function () {
+      var carousel = layui.carousel;
+      //建造实例
+      carousel.render({
+        elem: '#test1',
+        width: '100%' //设置容器宽度
+          ,
+        arrow: 'none' //始终显示箭头
+          ,
+        anim: 'updown' //切换动画方式
+          ,
+        indicator: 'none'
+      });
+    });
+
+    // 加号图标点击事件
+    document.onclick = function (e) {
+      $(".add_nav").addClass('hide')
+    }
+    $(".icontianjia").on('click', function (e) {
+      $('.add_nav').removeClass('hide')
+      stopFunc(e)
+    })
+
+    // 阻止冒泡
+    function stopFunc(e) {
+      e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+    }
+
+    // 买卖币切换
     $(".home_change_type span").on('click', function () {
       $(".home_change_type span").removeClass('active')
       $(this).addClass('active')
     })
+
+    // 币种导航切换
     $(".bi_type li").on('click', function () {
       $(".bi_type li").removeClass('active')
       $(this).addClass('active')
     })
-    $(".home_change_bi").on('click', function() {
+
+    // 点击搜索出现搜索弹窗
+    $(".iconsousuo").on('click', function () {
+      layui.use('layer', function () {
+        var str = '';
+        str += '<div class="g-container">'
+        str += '<form action="" class="basic-grey">'
+        str += '<div class="form-group">'
+        str += '<div class="Companies">'
+        str += '<div class="header">'
+        str += '<span class="iconfont iconfanhui"></span>'
+        str += '<input class="form-control" type="text" placeholder="搜索您要找的币种" id="js-groupId">'
+        str += '<input type="hidden" id="groupId">'
+        str += '<span class="sousuo_cancel">取消</span>'
+        str += '</div>'
+        str += '<ul id="groupid">'
+        str += '<li data-id="827"><a href="javascript:void(0)">USDT</a></li>'
+        str += '<li data-id="826"><a href="javascript:void(0)">OTC</a></li>'
+        str += '<li data-id="826"><a href="javascript:void(0)">ETH</a></li>'
+        str += '<li data-id="826"><a href="javascript:void(0)">BTC</a></li>'
+        str += '<li data-id="826"><a href="javascript:void(0)">EOS</a></li>'
+        str += '<li data-id="826"><a href="javascript:void(0)">ZEC</a></li>'
+        str += '</ul>'
+        str += '</div>'
+        str += '</div>'
+        str += '</form>'
+        str += '</div>'
+
+        // 搜索模糊查询插件
+        jQuery.expr[':'].Contains = function (a, i, m) {
+          return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+        };
+
+        function filterList(list) {
+          $('#js-groupId').bind('input propertychange', function () {
+            var filter = $(this).val();
+            if (filter) {
+              $matches = $(list).find('a:Contains(' + filter + ')').parent();
+              $('li', list).not($matches).slideUp();
+              $matches.slideDown();
+            } else {
+              $(list).find("li").slideDown();
+            }
+          });
+        }
+        $(function () {
+          filterList($("#groupid"));
+          $('#js-groupId').bind('focus', function () {
+            $('#groupid').slideDown();
+          }).bind('blur', function () {
+            $('#groupid').slideUp();
+          })
+          $('#groupid').on('click', 'li', function () {
+            $('#js-groupId').val($(this).text())
+            $('#groupId').val($(this).data('id'))
+            $('#groupid').slideUp()
+          });
+        })
+        // 搜索模糊查询插件结束
+
+        layer.open({
+          title: false,
+          closeBtn: false,
+          type: 1,
+          content: str,
+          skin: 'sousuo',
+        })
+        // 点击取消关闭弹窗
+        $(".sousuo_cancel,.iconfanhui").on('click', function () {
+          layer.closeAll()
+        })
+        // 点击搜索结果关闭弹窗
+        $("#groupid li").on('click', function () {
+          layer.closeAll()
+        })
+      })
+    })
+
+    //  左上角选币弹窗
+    $(".home_change_bi").on('click', function () {
       layui.use('layer', function () {
         var layer = layui.layer
         var str = ''
@@ -223,18 +366,20 @@
         str += '</div>'
         str += '</div>'
         layer.open({
-          title: false,
-          closeBtn: false,
+          title: false, // 弹窗标题
+          closeBtn: false, // 关闭按钮
           type: 1,
           content: str,
-          skin: 'choose_bi',
+          skin: 'choose_bi', // 单独弹窗class名
+          shadeClose: true // 点击遮罩关闭弹窗
         })
-        $(".home_dialog_choose_left li").on('click', function() {
+        // 左上角选币改变文字
+        $(".home_dialog_choose_left li").on('click', function () {
           var left = $(this).text()
           $(".home_change_bi span:first-child").text(left)
           layer.closeAll()
         })
-        $(".home_dialog_choose_right li").on('click', function() {
+        $(".home_dialog_choose_right li").on('click', function () {
           var right = $(this).text()
           $(".home_change_bi span:nth-child(3)").text(right)
           layer.closeAll()
@@ -242,6 +387,8 @@
       })
 
     })
+
+    // 点击购买弹窗判断是否满足购买条件
     function validate(id) {
       if (false) {
         window.onload = 'url' + id

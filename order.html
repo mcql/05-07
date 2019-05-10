@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="initial-scale=1,  user-scalable=no,maximum-scale=1, minimum-scale=1">
+  <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1, minimum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="./layui/css/layui.mobile.css">
   <link rel="stylesheet" href="./font/font.css">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/mindex.css">
@@ -28,7 +29,7 @@
     </div>
     <div class="order_info">
       <p><span>对方信息</span><span class="order_man_name">OTC Ventas</span></p>
-      <span class="iconfont icontishi"></span>
+      <span class="iconfont icontishi" id="tips_msg"></span>
     </div>
     <div class="order_message">
       <p>交易说明</p>
@@ -36,7 +37,8 @@
     </div>
     <div class="order_pay">
       <p>支付信息</p>
-      <p class="order_pay_type"><span class="iconfont iconyinxingqia"></span><span class="iconfont iconweixin"></span><span class="iconfont iconzhifubao"></span></p>
+      <p class="order_pay_type"><span class="iconfont iconyinxingqia"></span><span
+          class="iconfont iconweixin"></span><span class="iconfont iconzhifubao"></span></p>
     </div>
     <div class="order_message_pay">
       <p>ETH托管时间剩余<span class="order_time">00:10:03</span>逾期将自动取消</p>
@@ -48,10 +50,11 @@
       <span class="important">标记付款</span>
     </div>
   </section>
+  <script src="./layui/layui.js"></script>
   <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
   <script>
-    $(function() {
-      var timeInterval = setInterval(function() {
+    $(function () {
+      var timeInterval = setInterval(function () {
         var time = $(".order_time").text()
         var timex = time.split(':')
         var time_real = Number(timex[0]) * 3600 + Number(timex[1]) * 60 + Number(timex[2])
@@ -73,6 +76,31 @@
           clearInterval(timeInterval)
         }
       }, 1000)
+
+      $(".icontishi").on('click', function () {
+        layui.use('layer', function () {
+          layer.tips('用户信息', '#tips_msg', {tips: 2, skin: 'user_msg', time: 5000})
+        })
+      })
+
+      $(".order_pay_type span").on('click', function() {
+        layui.use('layer', function () {
+          var str = ''
+          str += '<div class="ewm">'
+          str += '<img src ="./images/ewm.png" />'
+          str += '<p>付款信息</p>'
+          str += '</div>'
+          layer.open({
+            title: false, // 弹窗标题
+            closeBtn: false, // 关闭按钮
+            type: 1,
+            content: str,
+            skin: 'pay_img', // 单独弹窗class名
+            shadeClose: true // 点击遮罩关闭弹窗
+          })
+        })
+      })
+
     })
   </script>
 </body>
